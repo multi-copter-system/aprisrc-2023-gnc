@@ -169,7 +169,7 @@ INSERT INTO GD_GE
 	"cffb1f34-17cc-4d13-a039-a12d622c8c8f",
 	100,
 	0,
-	'gnc::System::gnc::Library::GNC');
+	'gnc::System::gnc::Library::Control');
 INSERT INTO GD_SHP
 	VALUES ("bc4c2052-8e87-4dcb-aab2-c8cc5d13792e");
 INSERT INTO GD_NCS
@@ -198,7 +198,7 @@ INSERT INTO GD_GE
 	"94bdc6ef-8903-4e4c-9eeb-1fbfe06732ca",
 	106,
 	0,
-	'gnc::System::gnc::Library::GNC::Port1::mavcontrol');
+	'gnc::System::gnc::Library::Control::Port1::mavcontrol');
 INSERT INTO GD_CON
 	VALUES ("651009d0-1a04-4c41-afb2-74134781050e",
 	"00000000-0000-0000-0000-000000000000");
@@ -339,6 +339,7 @@ INSERT INTO C_PO_PROXY
 	'Port1',
 	0,
 	0,
+	'',
 	'../Library/MAV/MAV.xtuml');
 INSERT INTO PE_PE
 	VALUES ("e2fb02b0-82c3-4b4a-bff8-10cc058eb3c1",
@@ -356,6 +357,7 @@ INSERT INTO C_C_PROXY
 	"00000000-0000-0000-0000-000000000000",
 	0,
 	'',
+	'',
 	'../Library/MAV/MAV.xtuml');
 INSERT INTO CL_IC
 	VALUES ("cffb1f34-17cc-4d13-a039-a12d622c8c8f",
@@ -364,7 +366,7 @@ INSERT INTO CL_IC
 	"00000000-0000-0000-0000-000000000000",
 	0,
 	'',
-	'gnc::Library::GNC',
+	'gnc::Library::Control',
 	'');
 INSERT INTO CL_POR
 	VALUES ("cffb1f34-17cc-4d13-a039-a12d622c8c8f",
@@ -388,14 +390,15 @@ INSERT INTO C_IR_PROXY
 	"78776ad7-dffd-4126-8217-a913ac6e4bc8",
 	"00000000-0000-0000-0000-000000000000",
 	"bada52a0-1256-430d-8579-634b9c323fea",
-	'../Library/GNC/GNC.xtuml');
+	'../Library/Control/Control.xtuml');
 INSERT INTO C_PO_PROXY
 	VALUES ("bada52a0-1256-430d-8579-634b9c323fea",
 	"0d80503a-3f90-42a8-a2a9-2f52ccd4308f",
 	'Port1',
 	0,
 	0,
-	'../Library/GNC/GNC.xtuml');
+	'',
+	'../Library/Control/Control.xtuml');
 INSERT INTO PE_PE
 	VALUES ("cffb1f34-17cc-4d13-a039-a12d622c8c8f",
 	1,
@@ -406,19 +409,20 @@ INSERT INTO C_C_PROXY
 	VALUES ("0d80503a-3f90-42a8-a2a9-2f52ccd4308f",
 	"00000000-0000-0000-0000-000000000000",
 	"00000000-0000-0000-0000-000000000000",
-	'GNC',
+	'Control',
 	'',
 	0,
 	"00000000-0000-0000-0000-000000000000",
 	0,
 	'',
-	'../Library/GNC/GNC.xtuml');
+	'',
+	'../Library/Control/Control.xtuml');
 INSERT INTO C_SF
 	VALUES ("289ca3e9-52ea-4ef6-95f3-c1b9a693f732",
 	"33610dbc-6887-421d-81c6-740629675b3d",
 	"93221829-0135-489c-961a-9d42c4252036",
 	'',
-	'MAV::Port1::mavcontrol -o)- GNC::Port1::mavcontrol');
+	'MAV::Port1::mavcontrol -o)- Control::Port1::mavcontrol');
 INSERT INTO PE_PE
 	VALUES ("289ca3e9-52ea-4ef6-95f3-c1b9a693f732",
 	1,
@@ -430,8 +434,8 @@ INSERT INTO C_R_PROXY
 	'mavcontrol',
 	'',
 	'Unnamed Interface',
-	'GNC::Port1::mavcontrol',
-	'../Library/GNC/GNC.xtuml');
+	'Control::Port1::mavcontrol',
+	'../Library/Control/Control.xtuml');
 INSERT INTO C_P_PROXY
 	VALUES ("93221829-0135-489c-961a-9d42c4252036",
 	'mavcontrol',

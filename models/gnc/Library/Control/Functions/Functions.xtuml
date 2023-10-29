@@ -44,9 +44,136 @@ generate Controller1:''start'' to ctrl;
 	"ba5eda7a-def5-0000-0000-000000000000",
 	1,
 	'',
+	0,
 	0);
 INSERT INTO PE_PE
 	VALUES ("6da296e0-cfc3-41ea-b021-54b367d07943",
+	1,
+	"c266a8d5-aa61-43f4-9d01-7e2baedb603e",
+	"00000000-0000-0000-0000-000000000000",
+	1);
+INSERT INTO S_SYNC
+	VALUES ("860ae71c-a031-4b8f-999f-dcbf5516c3c5",
+	"00000000-0000-0000-0000-000000000000",
+	'arming',
+	'',
+	'select any ctrl from instances of Controller;
+generate Controller2:''arming'' to ctrl;',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'',
+	0,
+	1);
+INSERT INTO PE_PE
+	VALUES ("860ae71c-a031-4b8f-999f-dcbf5516c3c5",
+	1,
+	"c266a8d5-aa61-43f4-9d01-7e2baedb603e",
+	"00000000-0000-0000-0000-000000000000",
+	1);
+INSERT INTO S_SYNC
+	VALUES ("ff5bdfb4-f766-4570-9de6-af1e87a1cf60",
+	"00000000-0000-0000-0000-000000000000",
+	'disarming',
+	'',
+	'select any ctrl from instances of Controller;
+generate Controller9:''disarming'' to ctrl;',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'',
+	0,
+	2);
+INSERT INTO PE_PE
+	VALUES ("ff5bdfb4-f766-4570-9de6-af1e87a1cf60",
+	1,
+	"c266a8d5-aa61-43f4-9d01-7e2baedb603e",
+	"00000000-0000-0000-0000-000000000000",
+	1);
+INSERT INTO S_SYNC
+	VALUES ("a1ec1aa4-b998-4741-87de-311c29937200",
+	"00000000-0000-0000-0000-000000000000",
+	'halt',
+	'',
+	'select any ctrl from instances of Controller;
+generate Controller4:''halt'' to ctrl;',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'',
+	0,
+	3);
+INSERT INTO PE_PE
+	VALUES ("a1ec1aa4-b998-4741-87de-311c29937200",
+	1,
+	"c266a8d5-aa61-43f4-9d01-7e2baedb603e",
+	"00000000-0000-0000-0000-000000000000",
+	1);
+INSERT INTO S_SYNC
+	VALUES ("e8a66153-0598-44a0-9a47-43195c7cbc8c",
+	"00000000-0000-0000-0000-000000000000",
+	'begin_return',
+	'',
+	'select any ctrl from instances of Controller;
+generate Controller7:''begin_return'' to ctrl;',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'',
+	0,
+	4);
+INSERT INTO PE_PE
+	VALUES ("e8a66153-0598-44a0-9a47-43195c7cbc8c",
+	1,
+	"c266a8d5-aa61-43f4-9d01-7e2baedb603e",
+	"00000000-0000-0000-0000-000000000000",
+	1);
+INSERT INTO S_SYNC
+	VALUES ("64a45566-c3cb-42e1-8b9d-0f5c123e2621",
+	"00000000-0000-0000-0000-000000000000",
+	'finish_return',
+	'',
+	'select any ctrl from instances of Controller;
+generate Controller8:''finish_return'' to ctrl;',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'',
+	0,
+	5);
+INSERT INTO PE_PE
+	VALUES ("64a45566-c3cb-42e1-8b9d-0f5c123e2621",
+	1,
+	"c266a8d5-aa61-43f4-9d01-7e2baedb603e",
+	"00000000-0000-0000-0000-000000000000",
+	1);
+INSERT INTO S_SYNC
+	VALUES ("0e21e53b-56bf-4512-bcf5-e79d1a7d8dec",
+	"00000000-0000-0000-0000-000000000000",
+	'begin_move',
+	'',
+	'select any ctrl from instances of Controller;
+generate Controller5:''begin_move'' to ctrl;',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'',
+	0,
+	6);
+INSERT INTO PE_PE
+	VALUES ("0e21e53b-56bf-4512-bcf5-e79d1a7d8dec",
+	1,
+	"c266a8d5-aa61-43f4-9d01-7e2baedb603e",
+	"00000000-0000-0000-0000-000000000000",
+	1);
+INSERT INTO S_SYNC
+	VALUES ("67547c52-f26c-4c80-8aa1-ab44854ec7d4",
+	"00000000-0000-0000-0000-000000000000",
+	'finish_move',
+	'',
+	'select any ctrl from instances of Controller;
+generate Controller6:''finish_move'' to ctrl;',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'',
+	0,
+	7);
+INSERT INTO PE_PE
+	VALUES ("67547c52-f26c-4c80-8aa1-ab44854ec7d4",
 	1,
 	"c266a8d5-aa61-43f4-9d01-7e2baedb603e",
 	"00000000-0000-0000-0000-000000000000",
@@ -66,6 +193,7 @@ INSERT INTO C_C_PROXY
 	0,
 	"00000000-0000-0000-0000-000000000000",
 	0,
+	'',
 	'',
 	'../Control.xtuml');
 INSERT INTO S_SYS_PROXY
