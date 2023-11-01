@@ -1,12 +1,4 @@
-# APRIS 2023 Robot Challenge
-
-## How to clone
-You should rename this repository to `gnc`.
-```
-git clone <this repo url> gnc
-```
-
-<!-- # gnc: An example project of BridgePoint for controlling quad copter for APRIS Robot Challange
+# gnc: An example project of BridgePoint for controlling quad copter for APRIS Robot Challange
 
 ## How to run
 
@@ -32,4 +24,4 @@ git clone https://github.com/hisazumi/gnc.git
 * Before executing gnc, run Airsim, ArduCopter SITL, and apm accroding to README.md of the installation instruction.
 ```
 rosrun gnc ctrl
-``` -->
+```
