@@ -380,7 +380,8 @@ INSERT INTO SPR_RO
 	VALUES ("f864983a-f5f2-4a40-ae2f-8dbaf0842d15",
 	'ready',
 	'',
-	'select any ctrl from Controller;
+	'// select any ctrl from Controller;
+select any ctrl from instances of Controller;
 generate Controller3:''ready'' to ctrl;
 ',
 	1,

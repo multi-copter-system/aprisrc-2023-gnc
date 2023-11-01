@@ -997,8 +997,12 @@ INSERT INTO SM_ACT
 	VALUES ("36493edb-4539-46bc-a9a8-c951044ec325",
 	"c0c74364-95af-42df-a665-9e2fd1a7f507",
 	1,
-	'Port1::takeoff( alt:1 );
-Port1::set_heading( heading:0 );',
+	'//select any ctrl from instances of Controller;
+// Port1::arm();
+// Port1::takeoff( alt:1 );
+Port1::takeoff( alt:2.0 );
+Port1::set_heading( heading:0 );
+//generate Controller3:''ready'' to ctrl;',
 	'',
 	0);
 INSERT INTO SM_MOAH

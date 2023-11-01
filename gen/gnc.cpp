@@ -472,6 +472,9 @@ void command_cb(const std_msgs::String::ConstPtr& msg)
 	}else if(msg->data == "halt"){
 		Control_halt();
 	}else if(msg->data == "arming"){
+		set_mode("STABILIZE");
+		gnc_arm();
+		set_mode("GUIDED");
 		Control_arming();
 	}else if(msg->data == "disarming"){
 		Control_disarming();
