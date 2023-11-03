@@ -305,6 +305,40 @@ int gnc_arm()
 	}
 }
 
+
+// add
+int gnc_disarm()
+{
+	//intitialize first waypoint of mission
+	gnc_set_heading(0);
+	gnc_set_destination(0,0,0);
+	for(int i=0; i<100; i++)
+	{
+		local_pos_pub.publish(waypoint_g);
+		ros::spinOnce();
+		ros::Duration(0.01).sleep();
+	}
+	// disarming
+	ROS_INFO("Disarming drone");
+	mavros_msgs::CommandBool arm_request;
+	arm_request.request.value = false;  // true = arming, false = disarming
+	while (!current_state_g.armed && !arm_request.response.success && ros::ok())
+	{
+		ros::Duration(.1).sleep();
+		arming_client.call(arm_request);
+		local_pos_pub.publish(waypoint_g);
+	}
+	if(arm_request.response.success)
+	{
+		ROS_INFO("Disarming Successful");
+		return 0;
+	}else{
+		ROS_INFO("Disarming failed with %d", arm_request.response.success);
+		return -1;
+	}
+}
+
+
 /**
 \ingroup control_functions
 The takeoff function will arm the drone and put the drone in a hover above the initial position. 
@@ -465,6 +499,11 @@ void command_cb(const std_msgs::String::ConstPtr& msg)
 	ROS_INFO("received message: %s", msg->data.c_str());
 	if(msg->data == "arming")
 	{
+		set_mode("STABILIZE");
+		wait4mode("STABILIZE");
+		gnc_arm();
+		set_mode("GUIDED");
+		wait4start();
 		Control_arming();
 	}
 	else if(msg->data == "begin_move")
@@ -549,6 +588,10 @@ void gnc_init() {
 
 	//create local reference frame 
 	initialize_local_frame();
+
+	// add
+	// disarming
+	gnc_disarm();
 }
 
 void gnc_background (void) {
