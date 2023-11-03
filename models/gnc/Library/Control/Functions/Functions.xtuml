@@ -24,7 +24,7 @@ INSERT INTO GD_MD
 	0,
 	0,
 	0,
-	'',
+	'4.1.17',
 	'gnc::Library::Control::Functions');
 INSERT INTO DIM_DIA
 	VALUES ("875a0e4e-f520-435b-a5c7-d4903f070f2a",
@@ -44,9 +44,100 @@ generate Controller1:''start'' to ctrl;
 	"ba5eda7a-def5-0000-0000-000000000000",
 	1,
 	'',
+	0,
 	0);
 INSERT INTO PE_PE
 	VALUES ("6da296e0-cfc3-41ea-b021-54b367d07943",
+	1,
+	"c266a8d5-aa61-43f4-9d01-7e2baedb603e",
+	"00000000-0000-0000-0000-000000000000",
+	1);
+INSERT INTO S_SYNC
+	VALUES ("8147a608-a880-4c71-af21-470b9b28b3b5",
+	"00000000-0000-0000-0000-000000000000",
+	'arming',
+	'',
+	'select any ctrl from instances of Controller;
+generate Controller3:''arming'' to ctrl;',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'',
+	0,
+	1);
+INSERT INTO PE_PE
+	VALUES ("8147a608-a880-4c71-af21-470b9b28b3b5",
+	1,
+	"c266a8d5-aa61-43f4-9d01-7e2baedb603e",
+	"00000000-0000-0000-0000-000000000000",
+	1);
+INSERT INTO S_SYNC
+	VALUES ("b4b27585-9437-4770-8bc7-6e3e6b6dbd76",
+	"00000000-0000-0000-0000-000000000000",
+	'begin_move',
+	'',
+	'select any ctrl from instances of Controller;
+generate Controller4:''begin_move'' to ctrl;',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'',
+	0,
+	2);
+INSERT INTO PE_PE
+	VALUES ("b4b27585-9437-4770-8bc7-6e3e6b6dbd76",
+	1,
+	"c266a8d5-aa61-43f4-9d01-7e2baedb603e",
+	"00000000-0000-0000-0000-000000000000",
+	1);
+INSERT INTO S_SYNC
+	VALUES ("35797f0c-ff38-4de7-8759-4d3f8493b320",
+	"00000000-0000-0000-0000-000000000000",
+	'begin_return',
+	'',
+	'select any ctrl from instances of Controller;
+generate Controller5:''begin_return'' to ctrl;',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'',
+	0,
+	3);
+INSERT INTO PE_PE
+	VALUES ("35797f0c-ff38-4de7-8759-4d3f8493b320",
+	1,
+	"c266a8d5-aa61-43f4-9d01-7e2baedb603e",
+	"00000000-0000-0000-0000-000000000000",
+	1);
+INSERT INTO S_SYNC
+	VALUES ("6814a448-c764-4693-9b14-a74ff439da92",
+	"00000000-0000-0000-0000-000000000000",
+	'halt',
+	'',
+	'select any ctrl from instances of Controller;
+generate Controller6:''halt'' to ctrl;',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'',
+	0,
+	4);
+INSERT INTO PE_PE
+	VALUES ("6814a448-c764-4693-9b14-a74ff439da92",
+	1,
+	"c266a8d5-aa61-43f4-9d01-7e2baedb603e",
+	"00000000-0000-0000-0000-000000000000",
+	1);
+INSERT INTO S_SYNC
+	VALUES ("f9df0259-e197-4dc1-9023-5a8d4074c35e",
+	"00000000-0000-0000-0000-000000000000",
+	'ready',
+	'',
+	'select any ctrl from instances of Controller;
+generate Controller2:''ready'' to ctrl;',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'',
+	0,
+	5);
+INSERT INTO PE_PE
+	VALUES ("f9df0259-e197-4dc1-9023-5a8d4074c35e",
 	1,
 	"c266a8d5-aa61-43f4-9d01-7e2baedb603e",
 	"00000000-0000-0000-0000-000000000000",
@@ -66,6 +157,7 @@ INSERT INTO C_C_PROXY
 	0,
 	"00000000-0000-0000-0000-000000000000",
 	0,
+	'',
 	'',
 	'../Control.xtuml');
 INSERT INTO S_SYS_PROXY
