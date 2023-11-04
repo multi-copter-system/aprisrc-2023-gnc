@@ -10,7 +10,8 @@ INSERT INTO C_EP
 	"78776ad7-dffd-4126-8217-a913ac6e4bc8",
 	-1,
 	'init',
-	'');
+	'',
+	0);
 INSERT INTO C_IO
 	VALUES ("b00324c5-e272-4a60-96b2-1a40dbbdea3e",
 	"ba5eda7a-def5-0000-0000-000000000000",
@@ -24,7 +25,8 @@ INSERT INTO C_EP
 	"78776ad7-dffd-4126-8217-a913ac6e4bc8",
 	-1,
 	'takeoff',
-	'');
+	'',
+	0);
 INSERT INTO C_IO
 	VALUES ("7642e709-1eb0-4ab6-86f5-a945e4e95c17",
 	"ba5eda7a-def5-0000-0000-000000000000",
@@ -47,7 +49,8 @@ INSERT INTO C_EP
 	"78776ad7-dffd-4126-8217-a913ac6e4bc8",
 	-1,
 	'land',
-	'');
+	'',
+	0);
 INSERT INTO C_IO
 	VALUES ("37d0542f-1ab7-4216-b4a8-2c23dffc0456",
 	"ba5eda7a-def5-0000-0000-000000000000",
@@ -61,7 +64,8 @@ INSERT INTO C_EP
 	"78776ad7-dffd-4126-8217-a913ac6e4bc8",
 	-1,
 	'arm',
-	'');
+	'',
+	0);
 INSERT INTO C_IO
 	VALUES ("c53d4966-9097-4e62-8e45-bb3b7522378a",
 	"ba5eda7a-def5-0000-0000-000000000000",
@@ -75,7 +79,8 @@ INSERT INTO C_EP
 	"78776ad7-dffd-4126-8217-a913ac6e4bc8",
 	-1,
 	'set_destination',
-	'');
+	'',
+	0);
 INSERT INTO C_IO
 	VALUES ("248f2941-48bf-4a2e-99ad-74a5d3b2f279",
 	"ba5eda7a-def5-0000-0000-000000000000",
@@ -116,7 +121,8 @@ INSERT INTO C_EP
 	"78776ad7-dffd-4126-8217-a913ac6e4bc8",
 	-1,
 	'set_heading',
-	'');
+	'',
+	0);
 INSERT INTO C_IO
 	VALUES ("c4c94ad5-cb8c-4b6d-94fd-23aafcb1bc52",
 	"ba5eda7a-def5-0000-0000-000000000000",
@@ -139,7 +145,8 @@ INSERT INTO C_EP
 	"78776ad7-dffd-4126-8217-a913ac6e4bc8",
 	-1,
 	'get_heading',
-	'');
+	'',
+	0);
 INSERT INTO C_IO
 	VALUES ("7576d5e0-2683-4a42-967a-ddb25a458620",
 	"ba5eda7a-def5-0000-0000-000000000003",
@@ -153,7 +160,8 @@ INSERT INTO C_EP
 	"78776ad7-dffd-4126-8217-a913ac6e4bc8",
 	-1,
 	'ready',
-	'');
+	'',
+	0);
 INSERT INTO C_IO
 	VALUES ("e2e61698-b9dc-4911-95c7-79872095f0dd",
 	"ba5eda7a-def5-0000-0000-000000000000",
@@ -162,6 +170,21 @@ INSERT INTO C_IO
 	1,
 	'',
 	"7576d5e0-2683-4a42-967a-ddb25a458620");
+INSERT INTO C_EP
+	VALUES ("3f1605a3-9062-4408-984a-2d188e468acd",
+	"78776ad7-dffd-4126-8217-a913ac6e4bc8",
+	0,
+	'set_destination_from_server',
+	'',
+	1);
+INSERT INTO C_IO
+	VALUES ("3f1605a3-9062-4408-984a-2d188e468acd",
+	"ba5eda7a-def5-0000-0000-000000000000",
+	'set_destination_from_server',
+	'',
+	0,
+	'',
+	"e2e61698-b9dc-4911-95c7-79872095f0dd");
 INSERT INTO PE_PE
 	VALUES ("78776ad7-dffd-4126-8217-a913ac6e4bc8",
 	1,

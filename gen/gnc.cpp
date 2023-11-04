@@ -25,6 +25,8 @@
 #include <string>
 #include <signal.h>
 
+#include "multi_copter_msgs/Waypoint.h"  // add
+
 /**
 \defgroup control_functions
 This module is designed to make high level control programming more simple. 
@@ -55,6 +57,7 @@ ros::ServiceClient set_mode_client;
 ros::ServiceClient takeoff_client;
 
 ros::Subscriber command_sub;  // add
+ros::ServiceClient wp_manager_client;  // add
 
 /**
 \ingroup control_functions
@@ -322,7 +325,7 @@ int gnc_disarm()
 	ROS_INFO("Disarming drone");
 	mavros_msgs::CommandBool arm_request;
 	arm_request.request.value = false;  // true = arming, false = disarming
-	while (!current_state_g.armed && !arm_request.response.success && ros::ok())
+	while (current_state_g.armed && !arm_request.response.success && ros::ok())
 	{
 		ros::Duration(.1).sleep();
 		arming_client.call(arm_request);
@@ -528,6 +531,32 @@ void command_cb(const std_msgs::String::ConstPtr& msg)
 	}
 }
 
+// add
+void gnc_set_destination_from_server()
+{
+	// create request message
+	multi_copter_msgs::Waypoint wp_request;
+	wp_request.request.cmd = "read";
+	wp_request.request.wp.x = 0.0;
+	wp_request.request.wp.y = 0.0;
+	wp_request.request.wp.z = 0.0;
+
+	// send request
+	wp_manager_client.call(wp_request);
+
+	// check request result
+	if(wp_request.response.result)
+	{
+		ROS_INFO("Get waypoint");
+		gnc_set_destination(wp_request.response.wp.x, wp_request.response.wp.y, wp_request.response.wp.z);
+	}
+	else
+	{
+		ROS_INFO("Can't get waypoint");
+		ROS_INFO("Stay here");
+	}
+}
+
 
 /**
 \ingroup control_functions
@@ -555,6 +584,7 @@ int init_publisher_subscriber(ros::NodeHandle controlnode)
 
 	// add
 	command_sub = controlnode.subscribe<std_msgs::String>("cmd", 10, command_cb);
+	wp_manager_client = controlnode.serviceClient<multi_copter_msgs::Waypoint>("/multi_copter_ctrl/waypoint_manager");
 
 	return 0;
 }
@@ -592,6 +622,7 @@ void gnc_init() {
 	// add
 	// disarming
 	gnc_disarm();
+	ROS_INFO("End initialize");
 }
 
 void gnc_background (void) {

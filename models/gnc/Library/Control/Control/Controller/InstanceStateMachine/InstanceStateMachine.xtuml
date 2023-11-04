@@ -683,7 +683,7 @@ INSERT INTO SM_AH
 INSERT INTO SM_ACT
 	VALUES ("9c31db7c-c27d-4c7c-ac07-5a8a0ff2265e",
 	"c0c74364-95af-42df-a665-9e2fd1a7f507",
-	3,
+	1,
 	'',
 	'',
 	0);
@@ -697,7 +697,7 @@ INSERT INTO SM_AH
 INSERT INTO SM_ACT
 	VALUES ("e09d8ae8-50bd-4458-8935-16e577b26c2c",
 	"c0c74364-95af-42df-a665-9e2fd1a7f507",
-	3,
+	1,
 	'',
 	'',
 	0);
@@ -726,7 +726,7 @@ INSERT INTO SM_AH
 INSERT INTO SM_ACT
 	VALUES ("2fe5bbd9-8df1-4ff7-8804-f19a8f1a39f8",
 	"c0c74364-95af-42df-a665-9e2fd1a7f507",
-	3,
+	1,
 	'',
 	'',
 	0);
@@ -740,8 +740,9 @@ INSERT INTO SM_AH
 INSERT INTO SM_ACT
 	VALUES ("1ca0cf32-eb73-4700-965a-5cb14bb5cbf8",
 	"c0c74364-95af-42df-a665-9e2fd1a7f507",
-	3,
-	'',
+	1,
+	'Port1::set_destination_from_server();
+Port1::set_heading( heading:0 );',
 	'',
 	0);
 INSERT INTO SM_MOAH
@@ -783,7 +784,7 @@ INSERT INTO SM_AH
 INSERT INTO SM_ACT
 	VALUES ("2e106725-2543-4e10-89a3-0fcbee831581",
 	"c0c74364-95af-42df-a665-9e2fd1a7f507",
-	3,
+	1,
 	'',
 	'',
 	0);
@@ -797,7 +798,7 @@ INSERT INTO SM_AH
 INSERT INTO SM_ACT
 	VALUES ("a9dc3ba8-9e0b-45a6-9253-432487102586",
 	"c0c74364-95af-42df-a665-9e2fd1a7f507",
-	3,
+	1,
 	'',
 	'',
 	0);
@@ -811,7 +812,7 @@ INSERT INTO SM_AH
 INSERT INTO SM_ACT
 	VALUES ("8d1aeedb-22e4-49fa-b88b-61bd10899e21",
 	"c0c74364-95af-42df-a665-9e2fd1a7f507",
-	3,
+	1,
 	'',
 	'',
 	0);
@@ -825,7 +826,7 @@ INSERT INTO SM_AH
 INSERT INTO SM_ACT
 	VALUES ("1881ce86-be2e-4b14-9146-2908763a486b",
 	"c0c74364-95af-42df-a665-9e2fd1a7f507",
-	3,
+	1,
 	'',
 	'',
 	0);
@@ -839,7 +840,7 @@ INSERT INTO SM_AH
 INSERT INTO SM_ACT
 	VALUES ("e0dcf523-b634-4cb3-9649-c882f1ebe0a0",
 	"c0c74364-95af-42df-a665-9e2fd1a7f507",
-	3,
+	1,
 	'',
 	'',
 	0);
@@ -853,7 +854,7 @@ INSERT INTO SM_AH
 INSERT INTO SM_ACT
 	VALUES ("b1547aca-b290-4145-a802-40acdfd183bf",
 	"c0c74364-95af-42df-a665-9e2fd1a7f507",
-	3,
+	1,
 	'',
 	'',
 	0);
@@ -867,7 +868,7 @@ INSERT INTO SM_AH
 INSERT INTO SM_ACT
 	VALUES ("7972c7f4-9780-42d0-94cc-3d98047163dc",
 	"c0c74364-95af-42df-a665-9e2fd1a7f507",
-	3,
+	1,
 	'',
 	'',
 	0);
@@ -881,7 +882,7 @@ INSERT INTO SM_AH
 INSERT INTO SM_ACT
 	VALUES ("b4667e19-94d3-47f3-93e2-f9ec0862bb34",
 	"c0c74364-95af-42df-a665-9e2fd1a7f507",
-	3,
+	1,
 	'',
 	'',
 	0);
@@ -895,7 +896,7 @@ INSERT INTO SM_AH
 INSERT INTO SM_ACT
 	VALUES ("1c37046b-a746-477c-af23-f78ad04ea2ae",
 	"c0c74364-95af-42df-a665-9e2fd1a7f507",
-	3,
+	1,
 	'',
 	'',
 	0);

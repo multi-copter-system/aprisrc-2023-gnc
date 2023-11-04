@@ -11,6 +11,7 @@ find_package(catkin REQUIRED)
 find_package(catkin REQUIRED COMPONENTS
   mavros
   std_msgs
+  multi_copter_msgs
 )
 
 ## System dependencies are found with CMake's conventions
@@ -138,9 +139,10 @@ include_directories(
 # add_executable(${PROJECT_NAME}_node src/gnc_node.cpp)
 
 file(GLOB MY_SOURCES src/*.c src/*.cpp)
+# add_dependencies(multi_copter_msgs multi_copter_msgs_generate_messages_cpp)
 add_executable(ctrl ${MY_SOURCES})
+add_dependencies(ctrl ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 target_link_libraries(ctrl ${catkin_LIBRARIES})
-
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the

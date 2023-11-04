@@ -9,6 +9,7 @@ INSERT INTO C_C
 	0,
 	"00000000-0000-0000-0000-000000000000",
 	0,
+	'',
 	'');
 INSERT INTO GD_MD
 	VALUES ("923e9ccc-4d36-4e8a-b368-24ade9ed0d3a",
@@ -170,7 +171,8 @@ INSERT INTO C_PO
 	"8564596e-96e2-44e8-b970-aaa1a7d3b8bc",
 	'Port1',
 	0,
-	0);
+	0,
+	'');
 INSERT INTO C_IR
 	VALUES ("93221829-0135-489c-961a-9d42c4252036",
 	"78776ad7-dffd-4126-8217-a913ac6e4bc8",
@@ -183,15 +185,16 @@ INSERT INTO C_P
 	'',
 	'MAV::Port1::mavcontrol');
 INSERT INTO SPR_PEP
-	VALUES ("2cdfb96e-bbce-4f74-8ed5-32bfa6461a0a",
+	VALUES ("5ddee7fb-aa17-4929-af8f-59d111ff2817",
 	"b00324c5-e272-4a60-96b2-1a40dbbdea3e",
 	"93221829-0135-489c-961a-9d42c4252036");
 INSERT INTO SPR_PO
-	VALUES ("2cdfb96e-bbce-4f74-8ed5-32bfa6461a0a",
+	VALUES ("5ddee7fb-aa17-4929-af8f-59d111ff2817",
 	'init',
 	'',
 	'',
 	3,
+	0,
 	0);
 INSERT INTO C_EP_PROXY
 	VALUES ("b00324c5-e272-4a60-96b2-1a40dbbdea3e",
@@ -199,17 +202,19 @@ INSERT INTO C_EP_PROXY
 	-1,
 	'init',
 	'',
+	0,
 	'../../Interfaces/mavcontrol/mavcontrol.xtuml');
 INSERT INTO SPR_PEP
-	VALUES ("17b9223c-4fbe-4528-9d24-88e8c6b169cb",
+	VALUES ("e6f00477-f415-4dd8-b65c-cfcec05a7a8b",
 	"7642e709-1eb0-4ab6-86f5-a945e4e95c17",
 	"93221829-0135-489c-961a-9d42c4252036");
 INSERT INTO SPR_PO
-	VALUES ("17b9223c-4fbe-4528-9d24-88e8c6b169cb",
+	VALUES ("e6f00477-f415-4dd8-b65c-cfcec05a7a8b",
 	'takeoff',
 	'',
 	'',
 	3,
+	0,
 	0);
 INSERT INTO C_EP_PROXY
 	VALUES ("7642e709-1eb0-4ab6-86f5-a945e4e95c17",
@@ -217,17 +222,19 @@ INSERT INTO C_EP_PROXY
 	-1,
 	'takeoff',
 	'',
+	0,
 	'../../Interfaces/mavcontrol/mavcontrol.xtuml');
 INSERT INTO SPR_PEP
-	VALUES ("843b9758-6f7e-434f-80e7-cbe244ffbe3f",
+	VALUES ("434c290a-16d2-43c6-a380-b1a4ae672232",
 	"37d0542f-1ab7-4216-b4a8-2c23dffc0456",
 	"93221829-0135-489c-961a-9d42c4252036");
 INSERT INTO SPR_PO
-	VALUES ("843b9758-6f7e-434f-80e7-cbe244ffbe3f",
+	VALUES ("434c290a-16d2-43c6-a380-b1a4ae672232",
 	'land',
 	'',
 	'',
 	3,
+	0,
 	0);
 INSERT INTO C_EP_PROXY
 	VALUES ("37d0542f-1ab7-4216-b4a8-2c23dffc0456",
@@ -235,17 +242,19 @@ INSERT INTO C_EP_PROXY
 	-1,
 	'land',
 	'',
+	0,
 	'../../Interfaces/mavcontrol/mavcontrol.xtuml');
 INSERT INTO SPR_PEP
-	VALUES ("5485bf8e-c85a-4150-857c-8bb2aec093d7",
+	VALUES ("fe597cd8-eb97-4ac4-bf77-7dc5a371a6df",
 	"c53d4966-9097-4e62-8e45-bb3b7522378a",
 	"93221829-0135-489c-961a-9d42c4252036");
 INSERT INTO SPR_PO
-	VALUES ("5485bf8e-c85a-4150-857c-8bb2aec093d7",
+	VALUES ("fe597cd8-eb97-4ac4-bf77-7dc5a371a6df",
 	'arm',
 	'',
 	'',
 	3,
+	0,
 	0);
 INSERT INTO C_EP_PROXY
 	VALUES ("c53d4966-9097-4e62-8e45-bb3b7522378a",
@@ -253,17 +262,19 @@ INSERT INTO C_EP_PROXY
 	-1,
 	'arm',
 	'',
+	0,
 	'../../Interfaces/mavcontrol/mavcontrol.xtuml');
 INSERT INTO SPR_PEP
-	VALUES ("9594ac6d-f38c-4123-b2f9-00a11f9f948b",
+	VALUES ("0f744858-b021-410f-96eb-dfd0b7c18ccb",
 	"248f2941-48bf-4a2e-99ad-74a5d3b2f279",
 	"93221829-0135-489c-961a-9d42c4252036");
 INSERT INTO SPR_PO
-	VALUES ("9594ac6d-f38c-4123-b2f9-00a11f9f948b",
+	VALUES ("0f744858-b021-410f-96eb-dfd0b7c18ccb",
 	'set_destination',
 	'',
 	'',
 	3,
+	0,
 	0);
 INSERT INTO C_EP_PROXY
 	VALUES ("248f2941-48bf-4a2e-99ad-74a5d3b2f279",
@@ -271,17 +282,19 @@ INSERT INTO C_EP_PROXY
 	-1,
 	'set_destination',
 	'',
+	0,
 	'../../Interfaces/mavcontrol/mavcontrol.xtuml');
 INSERT INTO SPR_PEP
-	VALUES ("0754e734-d3da-4fa8-bff4-fad81e3b5d4b",
+	VALUES ("8cdbb9ed-14c0-4915-9c0f-c9a91f21dca3",
 	"c4c94ad5-cb8c-4b6d-94fd-23aafcb1bc52",
 	"93221829-0135-489c-961a-9d42c4252036");
 INSERT INTO SPR_PO
-	VALUES ("0754e734-d3da-4fa8-bff4-fad81e3b5d4b",
+	VALUES ("8cdbb9ed-14c0-4915-9c0f-c9a91f21dca3",
 	'set_heading',
 	'',
 	'',
 	3,
+	0,
 	0);
 INSERT INTO C_EP_PROXY
 	VALUES ("c4c94ad5-cb8c-4b6d-94fd-23aafcb1bc52",
@@ -289,17 +302,19 @@ INSERT INTO C_EP_PROXY
 	-1,
 	'set_heading',
 	'',
+	0,
 	'../../Interfaces/mavcontrol/mavcontrol.xtuml');
 INSERT INTO SPR_PEP
-	VALUES ("5c3a02de-f488-46e9-8f8d-6c65ac369468",
+	VALUES ("c046f665-8dac-446f-8bd1-6b80fd3f0cc2",
 	"7576d5e0-2683-4a42-967a-ddb25a458620",
 	"93221829-0135-489c-961a-9d42c4252036");
 INSERT INTO SPR_PO
-	VALUES ("5c3a02de-f488-46e9-8f8d-6c65ac369468",
+	VALUES ("c046f665-8dac-446f-8bd1-6b80fd3f0cc2",
 	'get_heading',
 	'',
 	'',
 	3,
+	0,
 	0);
 INSERT INTO C_EP_PROXY
 	VALUES ("7576d5e0-2683-4a42-967a-ddb25a458620",
@@ -307,17 +322,19 @@ INSERT INTO C_EP_PROXY
 	-1,
 	'get_heading',
 	'',
+	0,
 	'../../Interfaces/mavcontrol/mavcontrol.xtuml');
 INSERT INTO SPR_PEP
-	VALUES ("c5523a0f-b436-48b9-a89f-15e0267e2379",
+	VALUES ("18d19207-ab87-4d4d-82ac-5e330ce0a6be",
 	"e2e61698-b9dc-4911-95c7-79872095f0dd",
 	"93221829-0135-489c-961a-9d42c4252036");
 INSERT INTO SPR_PO
-	VALUES ("c5523a0f-b436-48b9-a89f-15e0267e2379",
+	VALUES ("18d19207-ab87-4d4d-82ac-5e330ce0a6be",
 	'ready',
 	'',
 	'',
 	3,
+	0,
 	0);
 INSERT INTO C_EP_PROXY
 	VALUES ("e2e61698-b9dc-4911-95c7-79872095f0dd",
@@ -325,6 +342,27 @@ INSERT INTO C_EP_PROXY
 	-1,
 	'ready',
 	'',
+	0,
+	'../../Interfaces/mavcontrol/mavcontrol.xtuml');
+INSERT INTO SPR_PEP
+	VALUES ("5e3488ba-06e5-4d49-b2c3-90d73de760f8",
+	"3f1605a3-9062-4408-984a-2d188e468acd",
+	"93221829-0135-489c-961a-9d42c4252036");
+INSERT INTO SPR_PO
+	VALUES ("5e3488ba-06e5-4d49-b2c3-90d73de760f8",
+	'set_destination_from_server',
+	'',
+	'',
+	3,
+	0,
+	1);
+INSERT INTO C_EP_PROXY
+	VALUES ("3f1605a3-9062-4408-984a-2d188e468acd",
+	"78776ad7-dffd-4126-8217-a913ac6e4bc8",
+	0,
+	'set_destination_from_server',
+	'',
+	1,
 	'../../Interfaces/mavcontrol/mavcontrol.xtuml');
 INSERT INTO C_I_PROXY
 	VALUES ("78776ad7-dffd-4126-8217-a913ac6e4bc8",
