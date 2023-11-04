@@ -10,8 +10,7 @@ You need to setup a developing environment.
 https://github.com/hisazumi/aprisrc-sitl/tree/forairsim
 
 After setup the environment, clone this repository to `~/catkin_ws/src`.  
-You can backup (means moving to another directory) the already existing gnc if you need it.  
-You can also delete the gnc.
+You can backup (means moving to another directory) the already existing gnc if you need it. Also you can delete the gnc.
 
 When cloning this repository, you must rename this repository to `gnc`.
 
@@ -38,6 +37,14 @@ Order:
 run ArduCopter SITL ->  launch AirSim -> `roslaunch iq_sim apm.launch` -> You need wait to see a message such as `AP: EKF2 IMU0 is using GPS` -> `rosrun gnc ctrl`
 
 ```
+sim_vehicle.py -v ArduCopter -f airsim-copter
+```
+
+```
+roslaunch iq_sim apm.launch
+```
+
+```
 rosrun gnc ctrl
 ```
 
@@ -54,3 +61,7 @@ Command list:
 - `halt`
 - `begin_move`
 - `begin_return`
+
+For more information about controlling multi-copter using ROS topic:
+
+https://github.com/multi-copter-system/multi-copter-ctrl
