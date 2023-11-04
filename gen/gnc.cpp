@@ -507,6 +507,7 @@ void command_cb(const std_msgs::String::ConstPtr& msg)
 		gnc_arm();
 		set_mode("GUIDED");
 		wait4start();
+		initialize_local_frame();
 		Control_arming();
 	}
 	else if(msg->data == "begin_move")
@@ -554,6 +555,7 @@ void gnc_set_destination_from_server()
 	{
 		ROS_INFO("Can't get waypoint");
 		ROS_INFO("Stay here");
+		gnc_set_destination(waypoint_g.pose.position.x, waypoint_g.pose.position.y, waypoint_g.pose.position.z);
 	}
 }
 
