@@ -1,27 +1,56 @@
-# gnc: An example project of BridgePoint for controlling quad copter for APRIS Robot Challange
+# gnc: A project of BridgePoint for controlling multi-copter (quad copter)
+
+This project for APRIS Robot Challange and enPiT summer school.
+
 
 ## How to run
 
-1. Install AirSim and ArduPilot SITL for Ubuntu on Windows Subsystem for Linux (WSL 1)
+You need to setup a developing environment.
 
-* https://github.com/hisazumi/aprisrc-sitl/tree/forairsim
+https://github.com/hisazumi/aprisrc-sitl/tree/forairsim
 
-2. Download this project in catkin_ws/src in the conatiner
+After setup the environment, clone this repository to `~/catkin_ws/src`.  
+You can backup (means moving to another directory) the already existing gnc if you need it.  
+You can also delete the gnc.
+
+When cloning this repository, you must rename this repository to `gnc`.
+
 ```
-cd ~/catkin_ws/src
-git clone https://github.com/hisazumi/gnc.git
+git clone https://github.com/multi-copter-system/multi-copter-gnc.git gnc
 ```
 
-3. Import to your bridgepoint workspace
+Next,
 
-* launch bridgepoint (just type 'bridgepoint' on termianl in the container)
-* File menu -> Import -> General/Existing Project into Workspace -> Select root directory
-* and select imported directory (it should be ~/catkin_ws/src/gnc)
-* Build on BridgePoint (Ctrl+B or Project menu -> Build all)
+- Launch bridgepoint (ex. `~/BridgePoint/bridgepoint`)
+- File menu (top left on the window) -> Import -> General/Existing Project into Workspace -> Select root directory
+- Select imported directory (it should be `~/catkin_ws/src/gnc`)
+- Build on BridgePoint (Project menu (top on the window) -> Build all)
 
-4. Run in terminal
+Then, you must run the below command:
 
-* Before executing gnc, run Airsim, ArduCopter SITL, and apm accroding to README.md of the installation instruction.
+```
+source ~/catkin_ws/devel/setup.bash
+```
+
+Finally, executing gnc.
+
+Order:  
+run ArduCopter SITL ->  launch AirSim -> `roslaunch iq_sim apm.launch` -> You need wait to see a message such as `AP: EKF2 IMU0 is using GPS` -> `rosrun gnc ctrl`
+
 ```
 rosrun gnc ctrl
 ```
+
+And you can control multi-copter using ROS topic.
+
+```
+rostopic pub /gnc_node/cmd std_msgs/String "data: 'arming'"
+```
+
+Command list:
+
+- `ready`
+- `arming`
+- `halt`
+- `begin_move`
+- `begin_return`
